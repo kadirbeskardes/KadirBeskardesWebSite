@@ -1,0 +1,121 @@
+﻿@{
+    ViewData["Title"] = "Hakkımda";
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Kadir Beşkardeş</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /* Maddelerin puntosunu belirginleştir */
+        .list-group-item {
+            position: relative;
+            padding-left: 25px;
+            font-size: 1.1rem; /* İstediğiniz büyüklük */
+        }
+
+            .list-group-item::before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #6c757d; /* İstediğiniz renk */
+            }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="text-center mb-4">
+            <h1 class="display-4">Merhaba, Ben Kadir Beşkardeş</h1>
+            <p class="lead">Bilgisayar Mühendisi Adayı</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="card-title m-0">Yeteneklerim</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Web Geliştirme (ASP.NET Core MVC)</li>
+                            <li class="list-group-item">C# Programlama ve .NET Framework</li>
+                            <li class="list-group-item">Java Programlama</li>
+                            <li class="list-group-item">Python Programlama</li>
+                            <li class="list-group-item">Veritabanı Tasarımı (SQL Server, MySQL, MS SQL)</li>
+                            <li class="list-group-item">Problem Çözme ve Algoritma Geliştirme</li>
+                            <li class="list-group-item">İyi Seviyede İngilizce</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="card-title m-0">Bildiğim Diller ve Teknolojiler</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">C#</li>
+                            <li class="list-group-item">JavaScript (jQuery)</li>
+                            <li class="list-group-item">HTML/CSS</li>
+                            <li class="list-group-item">SQL (T-SQL)</li>
+                            <li class="list-group-item">Xamarin Forms</li>
+                            <li class="list-group-item">SQL (T-SQL)</li>
+                            <li class="list-group-item">Entity Framework</li>
+                            <li class="list-group-item">Git</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="card-title m-0">İş ve Eğitim Geçmişim</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <strong>Yıldız Teknik Üniversitesi Bilgi İşlem Daire Başkanlığı</strong> <br />Stajyer Yazılımcı
+                                <br>
+                                20 günlük zorunlu yazılım stajı
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Yıldız Teknik Üniversitesi Bilgi İşlem Daire Başkanlığı</strong> <br />Stajyer Yazılımcı
+                                <br>
+                                25 günlük zorunlu yazılım stajı
+                            </li>
+                            <!-- Diğer iş ve eğitim geçmişi maddelerini de benzer şekilde ekleyebilirsiniz -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="card-title m-0">Eğitim Bilgilerim</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <strong>Kırıkkale Üniversitesi</strong> - Bilgisayar Mühendisliği - 2020 - Devam ediyor...
+                                <br>
+                            </li>
+                            <!-- Diğer eğitim geçmişi maddelerini de benzer şekilde ekleyebilirsiniz -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "İletişim";
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewData["Title"] - Kadir Beşkardeş</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .contact-info,
+        .contact-form {
+            padding: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 mx-auto">
+                <h1 class="display-4 text-center">İletişim</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="contact-info">
+                            <h4>İletişim Bilgilerim</h4>
+                            <p><strong>Telefon:</strong> [Telefon Numarası]</p>
+                            <p><strong>E-posta 1:</strong> <a href="mailto:kadir.beskardes11@gmail.com">kadir.beskardes11@gmail.com</a></p>
+                            <p><strong>E-posta 2:</strong> <a href="mailto:kadirbeskardes@outlook.com">kadirbeskardes@outlook.com</a></p>
+                            <p><strong>GitHub:</strong> <a href="https://github.com/kadirbeskardes" target="_blank">kadirbeskardes</a></p>
+                            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kadirbeskardes" target="_blank">kadirbeskardes</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="contact-form">
+                            <h4>Bize Ulaşın</h4>
+                            <form action="@Url.Action("Contact", "Home")" method="post">
+                                <div class="mb-3">
+                                    <label for="adSoyad" class="form-label">Ad Soyad</label>
+                                    <input type="text" class="form-control" id="adSoyad" name="adSoyad" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="telefon" class="form-label">Telefon Numarası</label>
+                                    <input type="tel" class="form-control" id="telefon" name="telefon" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">E-posta Adresi</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mesaj" class="form-label">Mesajınız</label>
+                                    <textarea class="form-control" id="mesaj" name="mesaj" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Gönder</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

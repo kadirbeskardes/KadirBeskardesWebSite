@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Projelerim";
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Kadir Beşkardeş</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /* Stil düzenlemeleri */
+        body {
+            padding-top: 20px;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header text-center mb-4">
+            <h1>Merhaba,</h1>
+            <h2>Benim Adım Kadir Beşkardeş</h2>
+            <p>Yazılım Geliştiriciyim ve özgeçmişimdeki projeleri sizinle paylaşmak istiyorum.</p>
+        </div>
+
+        <h2 class="text-center mb-3">Projeler</h2>
+        <hr />
+
+        <div class="row">
+            @foreach (var project in Model)
+            {
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="@project.ImageUrl" alt="@project.Title">
+                        <div class="card-body">
+                            <h3 class="card-title">@project.Title</h3>
+                            <p class="card-text">@project.Description</p>
+                            <p class="card-text"><strong>Teknolojiler:</strong> @project.Technologies</p>
+                            <a href="@Url.Action("ProjectDetail", "Home", new { id = project.Id })">Detayları Gör</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

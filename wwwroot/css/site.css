@@ -1,0 +1,116 @@
+
+    /* Ekran geniþliði 768px'den küçükse */
+    @media allscreen and (max-width: 768px) {
+        /* Ekran geniþliði 768px'den küçükse burasý çalýþýr */
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+        }
+
+        .sidebar {
+            position: fixed;
+            width: 250px;
+            height: 100%;
+            padding-top: 60px;
+            z-index: 1;
+            display: none;
+            transition: all 0.3s ease;
+        }
+
+            .sidebar.show {
+                display: block;
+            }
+
+        .main-content {
+            padding-top: 15px;
+        }
+}
+
+/* Genel stiller */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Kart stilleri */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Liste öðesi stilleri */
+.list-group-item {
+    background-color: #f8f9fa;
+    border: none;
+}
+
+/* Baþlýk stilleri */
+.display-4 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Metin stilleri */
+.lead {
+    font-size: 1.2rem;
+}
+
+/* Yetenek kartý stilleri */
+.card-header-yetenekler {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Yetenekler liste öðesi stilleri */
+.list-group-item-yetenekler {
+    background-color: #f8f9fa;
+    border: none;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+/* Teknoloji kartý stilleri */
+.card-header-teknolojiler {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Teknolojiler liste öðesi stilleri */
+.list-group-item-teknolojiler {
+    background-color: #f8f9fa;
+    border: none;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+/* Ýþ ve eðitim geçmiþi kartý stilleri */
+.card-header-isegitim {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Ýþ ve eðitim geçmiþi liste öðesi stilleri */
+.list-group-item-isegitim {
+    background-color: #f8f9fa;
+    border: none;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+/* Eðitim kartý stilleri */
+.card-header-egitim {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Eðitim liste öðesi stilleri */
+.list-group-item-egitim {
+    background-color: #f8f9fa;
+    border: none;
+    border-bottom: 1px solid #d1d1d1;
+}

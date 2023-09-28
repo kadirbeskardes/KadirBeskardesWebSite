@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null; // _layout'u devre dışı bırakın
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Animasyonu</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .intro-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+
+        .intro-logo {
+            opacity: 0;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-container">
+        <img class="intro-logo" src="~/logointro.gif" alt="Animation">
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".intro-logo").animate({ opacity: 1 }, 1250); // 2 saniyede görünürlüğü artır
+
+            setTimeout(function () {
+                $(".intro-logo").animate({ opacity: 0 }, 1250, function () {
+                    window.location.href = "/Home/Index"; // Ana sayfaya yönlendirme
+                }); // 2 saniyede görünürlüğü azalt ve yönlendir
+            }, 2500); // 4000 milisaniye (4 saniye) sonra yönlendirme yapılacak
+        });
+    </script>
+</body>
+</html>
